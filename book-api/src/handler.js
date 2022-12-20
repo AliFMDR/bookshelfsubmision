@@ -29,7 +29,7 @@ const addBookHandler = (request, h) => {
     }
 
     const newBook = {id, name, year, author, summary, publisher, pageCount, 
-        readPage, finished, reading, insertedAt, updateAt};
+        readPage, finished, reading, insertedAt, updatedAt};
 
     books.push(newBook);
     
@@ -178,7 +178,7 @@ const editBookByIdHandler = (request, h) => {
     if (index !== -1) {
         books[index] = {
             ...books[index],
-            name, year, author, summary, publisher, pageCount, readPage, reading, updateAt,
+            name, year, author, summary, publisher, pageCount, readPage, reading, updatedAt,
         };
 
         const response =h.response({
